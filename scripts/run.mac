@@ -1,0 +1,25 @@
+
+/random/setSeeds 122 222
+
+/gps/particle gamma
+/gps/pos/type Plane
+/gps/pos/shape Circle
+
+# radioactive source Am241
+/gps/ang/type iso
+/gps/pos/radius 1.0 mm
+#/gps/pos/centre 0. 35. 85. mm		# fast, top
+#/gps/pos/centre 0. 35. -15. mm		# BGO
+#/gps/pos/centre 0. 2. 135. mm		# SDC, front
+/gps/pos/centre 0. 2. 198. mm		# SDC, front
+/gps/ang/maxtheta 2.3 deg    		# opening angle of the collimator
+#/gps/pos/rot2 0 0 -1			# source looking down
+
+# to use the recorded Am241 spectrum
+/gps/ene/type Arb
+/gps/hist/type arb
+/gps/hist/file ../spectrum_Am241.dat
+/gps/hist/inter	Lin
+
+/run/beamOn 10
+#/run/beamOn 10000000
